@@ -1,10 +1,16 @@
-function App() {
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Main from "./pages/Main";
+import "./assets/styles/main.scss"
 
+function App() {
   return (
     <>
-      hello world
+      <Header/>
+      <Main />
+      <Footer/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
