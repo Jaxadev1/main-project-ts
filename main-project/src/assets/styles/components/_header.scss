@@ -1,5 +1,112 @@
-header{
+header {
   width: 100%;
-  height: 100px;
-  background-color: gray;
+  height: auto;
+  // background-color: $main-color;
+  // padding: 5px 0;
+  background-image: url(https://images.theconversation.com/files/165751/original/image-20170419-32689-1t9n8xe.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=754&fit=clip);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.additional{
+  background-color: #333333;
+  border-bottom: 2px solid $main-font-color;
+}
+
+.header {
+  position: relative;
+  color: $main-font-color;
+  @include flex(center, space-between);
+  padding: 5px 0;
+  &-logo {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    &-item {
+      width: 100px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    &-title {
+      text-decoration: underline;
+      font-size: 34px;
+      &-adnl {
+        color: skyblue;
+      }
+    }
+  }
+  &-search {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 400px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    &-item {
+      border: none;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      color: $main-best-color;
+      font-size: 22px;
+      border-radius: 10px;
+    }
+    &-icon {
+      border-left: 1px solid orangered;
+      padding: 0 10px;
+      cursor: pointer;
+    }
+  }
+  &-context {
+    @include flex(center, space-between);
+    // width: 30%;
+    gap: 30px;
+    &-item {
+      font-size: 24px;
+      cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border-bottom: 2px solid transparent;
+      &:hover {
+        color: white;
+        cursor: pointer;
+        border-bottom: 3px solid white;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}
+.header-main{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+  row-gap: 30px;
+  align-items: start;
+  // margin: 30px 0;
+  &-text{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    filter: drop-shadow(0 2px 2px red);
+  }
+  &-title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 80px;
+    font-weight: 300;
+    text-transform: capitalize;
+    filter: drop-shadow(0 2px 2px red);
+  }
+  &-btn{
+    width: 200px;
+    height: 42px;
+    border: 4px double red;
+    color: red;
+    font-size: 20px;
+  }
+}
+.header-main-background{
+  background-color: rgba(128, 128, 128, 0.269);
+  padding: 30px 0;
 }

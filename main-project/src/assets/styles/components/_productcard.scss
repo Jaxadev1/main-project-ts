@@ -1,0 +1,30 @@
+.product{
+  width: 300px;
+  height: fit-content;
+  // border: 2px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px 0;
+  &-image{
+    background-color: $main-best-color;
+    &-item{
+      width: 100%;
+    }
+  }
+  &-category{
+    background-color: $main-best-color;
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 2px solid $secpndary-font-color;
+    color: $secpndary-font-color;
+  }
+  &-context{
+    background-color: $main-best-color;
+    height: 100%;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
